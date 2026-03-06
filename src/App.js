@@ -526,7 +526,7 @@ export default function EssenciaPlena() {
               <FadeIn from="left">
                 <div className="book-highlight-img-side">
                   <div className="book-highlight-img-wrap">
-                    <img src="/livroautoral.jpeg" alt="As Extraordinárias Estações de uma Vida Comum" className="book-highlight-img" />
+                    <img src="/Livroautoral.jpeg" alt="As Extraordinárias Estações de uma Vida Comum" className="book-highlight-img" />
                   </div>
                 </div>
               </FadeIn>
