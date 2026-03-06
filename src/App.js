@@ -4,20 +4,20 @@ const whatsappNumber = "5561984913140";
 const whatsappLink = `https://wa.me/${whatsappNumber}`;
 
 const pastEncounters = [
-  { edicao: "Primeira edição", livro: "Mulheres Improváveis", autor: "Viviane Martinello", img: "/edicao1.jpeg" },
-  { edicao: "Segunda edição", livro: "Mulher Real", autor: "Júnia Hayashi", img: "/edicao2.jpeg" },
-  { edicao: "Terceira edição", livro: "Até que Nada Mais Importe", autor: "Luciano Subirá", img: "/edicao3.jpeg" },
-  { edicao: "Quarta edição", livro: "Como Ter o Coração de Maria no Mundo de Marta", autor: "Joana Weaver", img: "/edicao4.jpeg" },
+  { edicao: "Primeira edição", livro: "Mulheres Improváveis", autor: "Viviane Martinello", img: "/Edicao1.jpeg" },
+  { edicao: "Segunda edição", livro: "Mulher Real", autor: "Júnia Hayashi", img: "/Edicao2.jpeg" },
+  { edicao: "Terceira edição", livro: "Até que Nada Mais Importe", autor: "Luciano Subirá", img: "/Edicao3.jpeg" },
+  { edicao: "Quarta edição", livro: "Como Ter o Coração de Maria no Mundo de Marta", autor: "Joana Weaver", img: "/Edicao4.jpeg" },
   {
     edicao: "Quinta edição",
     livro: "As Extraordinárias Estações de uma Vida Comum",
     autor: "Gabriella Dinair",
-    img: "/edicao5.jpeg",
+    img: "/Edicao5.jpeg",
     special: true,
     modalDesc: "Um encontro especial onde a própria fundadora do projeto compartilhou sua obra autoral — um livro nascido de vivências reais, reflexões sobre a fé e as estações da vida. Uma noite de profunda emoção e conexão entre as participantes.",
   },
-  { edicao: "Sexta edição", livro: "Invisível", autor: "Sara Hagerty", img: "/edicao6.jpeg" },
-  { edicao: "Sétima edição", livro: "Enquanto Isso", autor: "Fernanda Witwytzky", img: "/edicao7.jpeg" },
+  { edicao: "Sexta edição", livro: "Invisível", autor: "Sara Hagerty", img: "/Edicao6.jpeg" },
+  { edicao: "Sétima edição", livro: "Enquanto Isso", autor: "Fernanda Witwytzky", img: "/Edicao7.jpeg" },
 ];
 
 const books = [
@@ -498,7 +498,7 @@ export default function EssenciaPlena() {
           <div className="modal-box" onClick={e => e.stopPropagation()}>
             <button className="modal-close" onClick={() => setModalOpen(false)}>✕</button>
             <div className="modal-img-wrap">
-              <img src="/livroautoral.jpeg" alt="Gabriella Dinair" className="modal-img" />
+              <img src="/Livroautoral.jpeg" alt="Gabriella Dinair" className="modal-img" />
             </div>
             <div className="modal-body">
               <span className="modal-tag">Quinta edição · Livro autoral</span>
