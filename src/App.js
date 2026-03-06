@@ -21,7 +21,7 @@ const pastEncounters = [
 ];
 
 const books = [
-  { month: "Maio", title: "Tudo sob Controle", author: "Jennifer Dukes Lee", image: "/livro1.png", dot: "#B89880" },
+  { month: "30 de Maio", title: "Tudo sob Controle", author: "Jennifer Dukes Lee", image: "/livro1.png", dot: "#B89880" },
   { month: "Agosto", title: "Descanse em Deus", author: "Joanna Weaver", image: "/livro2.png", dot: "#8C6B52" },
   { month: "Novembro", title: "O Fim da Ansiedade", author: "Max Lucado", image: "/livro3.png", dot: "#D4C4B0" },
 ];
