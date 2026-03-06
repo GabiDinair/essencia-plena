@@ -4,26 +4,62 @@ const whatsappNumber = "5561984913140";
 const whatsappLink = `https://wa.me/${whatsappNumber}`;
 
 const pastEncounters = [
-  { edicao: "Primeira edição", livro: "Mulheres Improváveis", autor: "Viviane Martinello", img: "/Edicao1.jpeg" },
-  { edicao: "Segunda edição", livro: "Mulher Real", autor: "Júnia Hayashi", img: "/Edicao2.jpeg" },
-  { edicao: "Terceira edição", livro: "Até que Nada Mais Importe", autor: "Luciano Subirá", img: "/Edicao3.jpeg" },
-  { edicao: "Quarta edição", livro: "Como Ter o Coração de Maria no Mundo de Marta", autor: "Joana Weaver", img: "/Edicao4.jpeg" },
+  { edicao: "Primeira edição", livro: "Mulheres Improváveis", autor: "Viviane Martinello", img: "/edicao1.jpeg" },
+  { edicao: "Segunda edição", livro: "Mulher Real", autor: "Júnia Hayashi", img: "/edicao2.jpeg" },
+  { edicao: "Terceira edição", livro: "Até que Nada Mais Importe", autor: "Luciano Subirá", img: "/edicao3.jpeg" },
+  { edicao: "Quarta edição", livro: "Como Ter o Coração de Maria no Mundo de Marta", autor: "Joana Weaver", img: "/edicao4.jpeg" },
   {
     edicao: "Quinta edição",
     livro: "As Extraordinárias Estações de uma Vida Comum",
     autor: "Gabriella Dinair",
-    img: "/Edicao5.jpeg",
+    img: "/edicao5.jpeg",
     special: true,
     modalDesc: "Um encontro especial onde a própria fundadora do projeto compartilhou sua obra autoral — um livro nascido de vivências reais, reflexões sobre a fé e as estações da vida. Uma noite de profunda emoção e conexão entre as participantes.",
   },
-  { edicao: "Sexta edição", livro: "Invisível", autor: "Sara Hagerty", img: "/Edicao6.jpeg" },
-  { edicao: "Sétima edição", livro: "Enquanto Isso", autor: "Fernanda Witwytzky", img: "/Edicao7.jpeg" },
+  { edicao: "Sexta edição", livro: "Invisível", autor: "Sara Hagerty", img: "/edicao6.jpeg" },
+  { edicao: "Sétima edição", livro: "Enquanto Isso", autor: "Fernanda Witwytzky", img: "/edicao7.jpeg" },
 ];
 
 const books = [
-  { month: "30 de Maio", title: "Tudo sob Controle", author: "Jennifer Dukes Lee", image: "/livro1.png", dot: "#B89880" },
-  { month: "Agosto", title: "Descanse em Deus", author: "Joanna Weaver", image: "/livro2.png", dot: "#8C6B52" },
-  { month: "Novembro", title: "O Fim da Ansiedade", author: "Max Lucado", image: "/livro3.png", dot: "#D4C4B0" },
+  {
+    month: "Maio",
+    title: "Tudo sob Controle",
+    author: "Jennifer Dukes Lee",
+    image: "/livro1.png",
+    dot: "#B89880",
+    edicao: "Oitava edição",
+    data: "30/05/2026",
+    horario: "Às 15h30",
+    local: "A definir",
+    desc: "Quando tudo parece fugir do controle, onde encontramos descanso? Jennifer Dukes Lee nos convida a soltar o fardo do perfeccionismo e confiar em Deus com cada detalhe da vida.",
+    palette: ["#8B4421", "#728268", "#AEB79B", "#F4E5BB"],
+  },
+  {
+    month: "Agosto",
+    title: "Descanse em Deus",
+    author: "Joanna Weaver",
+    image: "/livro2.png",
+    dot: "#8C6B52",
+    edicao: "Nona edição",
+    data: "A definir",
+    horario: "A definir",
+    local: "A definir",
+    desc: "Uma jornada sobre aprender a sentar aos pés de Jesus no meio da agitação do cotidiano. Joanna Weaver nos lembra que a intimidade com Deus é o nosso maior tesouro.",
+    palette: ["#EFF4F0", "#31936B", "#B3D4C3", "#135753", "#1A1612"],
+  },
+  {
+    month: "Novembro",
+    title: "O Fim da Ansiedade",
+    author: "Max Lucado",
+    image: "/livro3.png",
+    dot: "#D4C4B0",
+    edicao: "Décima edição",
+    data: "A definir",
+    horario: "A definir",
+    local: "A definir",
+    desc: "Max Lucado nos guia por uma jornada bíblica para vencer a ansiedade com fé, oração e a paz que excede todo entendimento — um encerramento de ano repleto de graça.",
+    palette: ["#E3E3E2", "#CAC9C7", "#63605E", "#C29458", "#1A1612"],
+  },
 ];
 
 const timelineItems = [
@@ -80,11 +116,9 @@ const styles = `
   body { font-family: 'Jost', sans-serif; background: var(--cream); color: var(--text-body); font-weight: 300; -webkit-font-smoothing: antialiased; }
   .display { font-family: 'Cormorant Garamond', serif; }
 
-  /* NAV */
   .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 20px 32px; display: flex; justify-content: center; align-items: center; background: rgba(250,247,242,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(184,152,128,0.15); transition: all 0.3s; }
   .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 400; letter-spacing: 0.25em; color: var(--brown); text-transform: uppercase; }
 
-  /* HERO */
   .hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 120px 24px 80px; position: relative; overflow: hidden; }
   .hero-bg { position: absolute; inset: 0; z-index: 0; background: radial-gradient(ellipse 80% 60% at 50% 40%, #EDE0D3 0%, var(--cream) 70%); }
   .hero-ornament { position: absolute; z-index: 0; border-radius: 50%; background: rgba(184,152,128,0.08); }
@@ -101,7 +135,6 @@ const styles = `
   @keyframes float { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(6px)} }
   .scroll-line { width: 1px; height: 36px; background: linear-gradient(to bottom, var(--brown-light), transparent); }
 
-  /* SECTIONS */
   section { padding: 100px 24px; }
   .container { max-width: 860px; margin: 0 auto; }
   .container-wide { max-width: 1100px; margin: 0 auto; }
@@ -109,13 +142,11 @@ const styles = `
   .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 6vw, 3rem); font-weight: 300; color: var(--brown-deep); line-height: 1.2; margin-bottom: 24px; }
   .section-body { font-size: 0.9rem; line-height: 1.95; color: var(--text-body); font-weight: 300; max-width: 580px; }
 
-  /* ABOUT */
   .about { background: var(--white); }
   .about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
   .about-quote { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.5rem, 4vw, 2.2rem); font-weight: 300; font-style: italic; color: var(--brown); line-height: 1.5; padding-left: 24px; border-left: 2px solid var(--nude-dark); }
   @media(max-width:720px){ .about-inner{ grid-template-columns:1fr; gap:40px; } }
 
-  /* PILARES */
   .pilares { background: var(--cream); }
   .pilar-header { display: flex; align-items: flex-start; gap: 20px; margin-bottom: 32px; }
   .pilar-number { font-family: 'Cormorant Garamond', serif; font-size: 4rem; font-weight: 300; color: var(--nude-dark); line-height: 1; flex-shrink: 0; }
@@ -128,7 +159,7 @@ const styles = `
   /* BOOK CARDS */
   .books-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 180px)); gap: 20px; justify-content: center; }
   @media(max-width:640px){ .books-grid{ grid-template-columns: repeat(3, 1fr); gap: 12px; } }
-  .book-card { background: var(--white); border-radius: 10px; overflow: hidden; border: 1px solid rgba(184,152,128,0.15); transition: transform 0.3s, box-shadow 0.3s; }
+  .book-card { background: var(--white); border-radius: 10px; overflow: hidden; border: 1px solid rgba(184,152,128,0.15); transition: transform 0.3s, box-shadow 0.3s; cursor: pointer; }
   .book-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(92,64,51,0.1); }
   .book-cover-placeholder { width: 100%; aspect-ratio: 2/3; overflow: hidden; display: block; background: var(--nude); position: relative; }
   .book-cover-placeholder img { width: 100%; height: 100%; object-fit: cover; object-position: center center; display: block; transition: transform 0.5s cubic-bezier(0.22,1,0.36,1); }
@@ -136,16 +167,14 @@ const styles = `
   .book-info { padding: 12px 12px 14px; }
   .book-month { font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--brown-light); margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
   .book-title { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 500; color: var(--brown-deep); line-height: 1.3; }
+  .book-click-hint { font-size: 0.58rem; color: var(--brown-light); letter-spacing: 0.15em; text-transform: uppercase; margin-top: 6px; opacity: 0.7; }
 
-  /* EVENTO CARDS */
   .evento-card { background: var(--white); border-radius: 16px; padding: 48px 40px; margin-bottom: 24px; border: 1px solid rgba(184,152,128,0.12); box-shadow: 0 4px 32px var(--shadow); display: grid; grid-template-columns: auto 1fr; gap: 32px; align-items: start; }
   @media(max-width:540px){ .evento-card{ grid-template-columns:1fr; } .pilar-card{ padding:36px 24px; } }
 
-  /* INFO PILL */
   .info-pill { display: inline-flex; align-items: center; gap: 6px; background: var(--cream); border: 1px solid var(--nude); border-radius: 40px; padding: 5px 14px; font-size: 0.75rem; color: var(--text-body); margin-right: 8px; margin-bottom: 8px; }
   .info-pill-icon { font-size: 0.8rem; }
 
-  /* CALENDAR */
   .calendar { background: var(--white); }
   .cal-list { margin-top: 64px; display: flex; flex-direction: column; }
   .cal-entry { display: flex; align-items: baseline; gap: 28px; padding: 28px 0; border-bottom: 1px solid var(--nude); }
@@ -156,7 +185,6 @@ const styles = `
   .cal-entry-desc { font-size: 0.8rem; color: var(--text-light); line-height: 1.5; }
   .cal-entry-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; margin-bottom: 3px; }
 
-  /* PAST ENCOUNTERS */
   .encontros { background: var(--cream); }
   .encontros-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 52px; }
   @media(max-width:900px){ .encontros-grid{ grid-template-columns: repeat(2, 1fr); } }
@@ -174,7 +202,7 @@ const styles = `
   .encontro-autor { font-size: 0.72rem; color: var(--text-light); font-style: italic; font-family: 'Cormorant Garamond', serif; }
   .encontro-special-badge { display: inline-flex; align-items: center; gap: 5px; font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brown); background: var(--cream); border: 1px solid var(--nude-dark); border-radius: 20px; padding: 3px 10px; margin-top: 8px; }
 
-  /* MODAL */
+  /* MODAL — shared */
   .modal-overlay { position: fixed; inset: 0; z-index: 1000; background: rgba(60,40,30,0.55); backdrop-filter: blur(4px); display: flex; align-items: center; justify-content: center; padding: 24px; animation: fadeOverlay 0.3s ease; }
   @keyframes fadeOverlay { from{ opacity:0 } to{ opacity:1 } }
   .modal-box { background: var(--white); border-radius: 20px; max-width: 560px; width: 100%; overflow: hidden; box-shadow: 0 24px 80px rgba(60,40,30,0.2); animation: slideModal 0.35s cubic-bezier(0.22,1,0.36,1); position: relative; max-height: 90vh; overflow-y: auto; }
@@ -194,7 +222,20 @@ const styles = `
   .modal-presenter-name { font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: var(--brown-deep); margin-bottom: 2px; }
   .modal-presenter-role { font-size: 0.68rem; color: var(--text-light); letter-spacing: 0.1em; text-transform: uppercase; }
 
-  /* BOOK HIGHLIGHT */
+  /* BOOK MODAL extras */
+  .modal-book-cover-wrap { width: 100%; aspect-ratio: 3/2; overflow: hidden; display: flex; align-items: center; justify-content: center; background: var(--cream); }
+  .modal-book-cover { height: 100%; width: auto; max-width: 100%; object-fit: contain; display: block; padding: 24px; }
+  .modal-info-row { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+  .modal-info-icon { width: 32px; height: 32px; border-radius: 50%; background: var(--cream); border: 1px solid var(--nude); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .modal-info-label { font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brown-light); margin-bottom: 1px; }
+  .modal-info-value { font-size: 0.88rem; color: var(--brown-deep); font-family: 'Cormorant Garamond', serif; }
+  .modal-palette-section { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--nude); }
+  .modal-palette-label { font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--brown-light); margin-bottom: 12px; display: block; }
+  .modal-palette-dots { display: flex; align-items: center; gap: 10px; }
+  .modal-palette-dot { width: 28px; height: 28px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.6); box-shadow: 0 2px 8px rgba(0,0,0,0.12); flex-shrink: 0; transition: transform 0.2s; cursor: default; }
+  .modal-palette-dot:hover { transform: scale(1.2); }
+  .modal-palette-hint { font-size: 0.75rem; color: var(--text-light); font-style: italic; font-family: 'Cormorant Garamond', serif; margin-left: 4px; }
+
   .book-highlight { background: var(--white); }
   .book-highlight-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
   @media(max-width:720px){ .book-highlight-inner{ grid-template-columns: 1fr; gap: 48px; } .book-highlight-img-side{ order: -1; max-width: 260px; margin: 0 auto; } }
@@ -209,24 +250,20 @@ const styles = `
   .book-highlight-btn { display: inline-flex; align-items: center; gap: 10px; border: 1px solid var(--brown); color: var(--brown); background: transparent; font-family: 'Jost', sans-serif; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; padding: 13px 28px; border-radius: 50px; cursor: pointer; text-decoration: none; transition: all 0.3s; }
   .book-highlight-btn:hover { background: var(--brown); color: white; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(140,107,82,0.25); }
 
-  /* CONTACT */
   .contact { background: var(--cream); text-align: center; }
   .contact-inner { max-width: 480px; margin: 0 auto; }
   .wa-button { display: inline-flex; align-items: center; gap: 12px; background: var(--brown); color: white; border: none; cursor: pointer; font-family: 'Jost', sans-serif; font-size: 0.8rem; font-weight: 400; letter-spacing: 0.2em; text-transform: uppercase; padding: 16px 36px; border-radius: 50px; text-decoration: none; transition: all 0.3s; margin-top: 32px; }
   .wa-button:hover { background: var(--brown-deep); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(92,64,51,0.25); }
   .wa-icon { font-size: 1.1rem; }
 
-  /* FOOTER */
   footer { padding: 32px 24px; text-align: center; background: var(--white); border-top: 1px solid rgba(184,152,128,0.12); }
   .footer-text { font-size: 0.72rem; letter-spacing: 0.15em; color: var(--text-light); }
   .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: var(--brown-light); letter-spacing: 0.25em; text-transform: uppercase; margin-bottom: 8px; }
 
-  /* DIVIDER */
   .ornament-divider { display: flex; align-items: center; gap: 16px; margin: 48px 0; }
   .ornament-line { flex: 1; height: 1px; background: var(--nude); }
   .ornament-symbol { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--brown-light); font-style: italic; }
 
-  /* PILLAR ICONS STRIP */
   .pillars-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 52px; }
   .pillar-icon-card { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px; padding: 32px 20px; border-radius: 16px; background: var(--white); border: 1px solid rgba(184,152,128,0.13); box-shadow: 0 4px 24px var(--shadow); transition: transform 0.35s cubic-bezier(0.22,1,0.36,1), box-shadow 0.35s; }
   .pillar-icon-card:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(92,64,51,0.11); }
@@ -236,14 +273,12 @@ const styles = `
   .pillar-icon-desc { font-size: 0.78rem; color: var(--text-light); line-height: 1.7; }
   @media(max-width:560px){ .pillars-strip{ grid-template-columns:1fr; gap:16px; } .pillar-icon-card{ flex-direction:row; text-align:left; gap:16px; padding:20px; } .pillar-icon-wrap{ flex-shrink:0; width:50px; height:50px; } }
 
-  /* PARK PHOTO CARD */
   .park-photo-card { width: 100%; border-radius: 14px; overflow: hidden; margin: 28px 0 24px; position: relative; aspect-ratio: 16/7; background: var(--nude); }
   .park-photo-card img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s cubic-bezier(0.22,1,0.36,1); }
   .park-photo-card:hover img { transform: scale(1.03); }
   .park-photo-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(92,64,51,0.35) 0%, transparent 55%); display: flex; align-items: flex-end; padding: 20px 24px; }
   .park-photo-caption { font-family: 'Cormorant Garamond', serif; font-size: 0.9rem; font-style: italic; color: rgba(255,255,255,0.92); letter-spacing: 0.05em; }
 
-  /* PSICO PHOTO CARDS */
   .psico-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 220px)); gap: 20px; margin-top: 28px; justify-content: center; }
   .psico-card { background: var(--cream); border-radius: 16px; overflow: hidden; border: 1px solid var(--nude); text-align: center; transition: transform 0.35s cubic-bezier(0.22,1,0.36,1), box-shadow 0.35s; }
   .psico-card:hover { transform: translateY(-4px); box-shadow: 0 14px 40px rgba(92,64,51,0.1); }
@@ -256,6 +291,8 @@ const styles = `
 
 export default function EssenciaPlena() {
   const [modalOpen, setModalOpen] = useState(false);
+  const [bookModal, setBookModal] = useState(null); // holds the book object when open
+
   return (
     <>
       <style>{styles}</style>
@@ -271,9 +308,7 @@ export default function EssenciaPlena() {
         <div className="hero-ornament hero-ornament-2" />
         <div className="hero-content">
           <FadeIn delay={0.1}><span className="hero-badge">Desenvolvimento Feminino</span></FadeIn>
-          <FadeIn delay={0.25}>
-            <h1 className="hero-title display">Essência<br /><em>Plena</em></h1>
-          </FadeIn>
+          <FadeIn delay={0.25}><h1 className="hero-title display">Essência<br /><em>Plena</em></h1></FadeIn>
           <FadeIn delay={0.4}>
             <div className="hero-divider" />
             <p className="hero-subtitle">Alimentando o espírito, a mente e o corpo</p>
@@ -304,21 +339,11 @@ export default function EssenciaPlena() {
               <blockquote className="about-quote display">"Somos seres integrais, criadas para florescer em espírito, mente e corpo."</blockquote>
             </FadeIn>
           </div>
-
           <div className="pillars-strip">
             {[
-              {
-                svg: (<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--brown)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2c0 0-2 2-2 4.5C10 9 12 10 12 10s2-1 2-3.5C14 4 12 2 12 2z"/><line x1="12" y1="10" x2="12" y2="22"/><path d="M8 22h8"/><path d="M9 17h6"/></svg>),
-                bg: "rgba(184,152,128,0.12)", label: "Pilar 01", name: "Espiritual", desc: "Alimentando a Fé e a Comunhão.",
-              },
-              {
-                svg: (<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--brown)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3a7 7 0 0 1 7 7c0 2.5-1.3 4.7-3.3 6l-.7 2H9l-.7-2A7 7 0 0 1 5 10a7 7 0 0 1 7-7z"/><path d="M9 21h6"/><path d="M10 13c0 0 .5-1.5 2-1.5s2 1.5 2 1.5"/></svg>),
-                bg: "rgba(160,128,112,0.12)", label: "Pilar 02", name: "Mental", desc: "Cuidando das emoções com sabedoria.",
-              },
-              {
-                svg: (<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--brown)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7v6l3 3"/><path d="M9 10l-3 2M15 10l3 2"/><path d="M9 20c0 0 1-3 3-3s3 3 3 3"/></svg>),
-                bg: "rgba(140,107,82,0.12)", label: "Pilar 03", name: "Físico", desc: "Honrando o corpo como Templo.",
-              },
+              { svg: (<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--brown)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2c0 0-2 2-2 4.5C10 9 12 10 12 10s2-1 2-3.5C14 4 12 2 12 2z"/><line x1="12" y1="10" x2="12" y2="22"/><path d="M8 22h8"/><path d="M9 17h6"/></svg>), bg: "rgba(184,152,128,0.12)", label: "Pilar 01", name: "Espiritual", desc: "Alimentando a Fé e a Comunhão." },
+              { svg: (<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--brown)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3a7 7 0 0 1 7 7c0 2.5-1.3 4.7-3.3 6l-.7 2H9l-.7-2A7 7 0 0 1 5 10a7 7 0 0 1 7-7z"/><path d="M9 21h6"/><path d="M10 13c0 0 .5-1.5 2-1.5s2 1.5 2 1.5"/></svg>), bg: "rgba(160,128,112,0.12)", label: "Pilar 02", name: "Mental", desc: "Cuidando das emoções com sabedoria." },
+              { svg: (<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--brown)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7v6l3 3"/><path d="M9 10l-3 2M15 10l3 2"/><path d="M9 20c0 0 1-3 3-3s3 3 3 3"/></svg>), bg: "rgba(140,107,82,0.12)", label: "Pilar 03", name: "Físico", desc: "Honrando o corpo como Templo." },
             ].map((p, i) => (
               <FadeIn key={i} delay={0.1 + i * 0.15} from="scale">
                 <div className="pillar-icon-card">
@@ -340,9 +365,7 @@ export default function EssenciaPlena() {
         <div className="container-wide">
           <FadeIn>
             <span className="section-tag" style={{ textAlign: "center", display: "block" }}>Os pilares</span>
-            <h2 className="section-title display" style={{ textAlign: "center", maxWidth: 500, margin: "0 auto 64px" }}>
-              Três pilares,<br />da Essência Plena
-            </h2>
+            <h2 className="section-title display" style={{ textAlign: "center", maxWidth: 500, margin: "0 auto 64px" }}>Três pilares,<br />da Essência Plena</h2>
           </FadeIn>
 
           {/* PILAR 1 — ESPIRITUAL */}
@@ -360,12 +383,13 @@ export default function EssenciaPlena() {
               <div className="books-grid">
                 {books.map((book, i) => (
                   <FadeIn key={i} delay={i * 0.12}>
-                    <div className="book-card">
+                    <div className="book-card" onClick={() => setBookModal(book)}>
                       <div className="book-cover-placeholder"><img src={book.image} alt={book.title} /></div>
                       <div className="book-info">
                         <div className="book-month">{book.month}</div>
                         <p className="book-title display">{book.title}</p>
                         <p style={{ fontSize: "0.72rem", color: "var(--text-light)", marginTop: 4, fontStyle: "italic" }}>{book.author}</p>
+                        <p className="book-click-hint">Ver detalhes →</p>
                       </div>
                     </div>
                   </FadeIn>
@@ -417,19 +441,13 @@ export default function EssenciaPlena() {
                   <FadeIn delay={0.1} from="scale">
                     <div className="psico-card">
                       <img src="/elo.png" alt="Eloiza Lançoni" className="psico-photo" />
-                      <div className="psico-info">
-                        <p className="psico-name display">Eloiza Lançoni</p>
-                        <p className="psico-role">Psicóloga</p>
-                      </div>
+                      <div className="psico-info"><p className="psico-name display">Eloiza Lançoni</p><p className="psico-role">Psicóloga</p></div>
                     </div>
                   </FadeIn>
                   <FadeIn delay={0.22} from="scale">
                     <div className="psico-card">
                       <img src="/thay.png" alt="Thayrra Andrese" className="psico-photo" />
-                      <div className="psico-info">
-                        <p className="psico-name display">Thayrra Andrese</p>
-                        <p className="psico-role">Psicóloga</p>
-                      </div>
+                      <div className="psico-info"><p className="psico-name display">Thayrra Andrese</p><p className="psico-role">Psicóloga</p></div>
                     </div>
                   </FadeIn>
                 </div>
@@ -438,6 +456,54 @@ export default function EssenciaPlena() {
           </FadeIn>
         </div>
       </section>
+
+      {/* MODAL DOS LIVROS */}
+      {bookModal && (
+        <div className="modal-overlay" onClick={() => setBookModal(null)}>
+          <div className="modal-box" onClick={e => e.stopPropagation()}>
+            <button className="modal-close" onClick={() => setBookModal(null)}>✕</button>
+            <div className="modal-book-cover-wrap">
+              <img src={bookModal.image} alt={bookModal.title} className="modal-book-cover" />
+            </div>
+            <div className="modal-body">
+              <span className="modal-tag">{bookModal.edicao} · Clube do Livro</span>
+              <p className="modal-title display">{bookModal.title}</p>
+              <p className="modal-author">{bookModal.author}</p>
+              <div className="modal-divider" />
+              <p className="modal-desc" style={{ marginBottom: 20 }}>{bookModal.desc}</p>
+              <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+                <div className="modal-info-row">
+                  <div className="modal-info-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brown)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                  </div>
+                  <div><p className="modal-info-label">Data</p><p className="modal-info-value">{bookModal.data}</p></div>
+                </div>
+                <div className="modal-info-row">
+                  <div className="modal-info-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brown)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+                  </div>
+                  <div><p className="modal-info-label">Horário</p><p className="modal-info-value">{bookModal.horario}</p></div>
+                </div>
+                <div className="modal-info-row">
+                  <div className="modal-info-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brown)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                  </div>
+                  <div><p className="modal-info-label">Local</p><p className="modal-info-value">{bookModal.local}</p></div>
+                </div>
+              </div>
+              <div className="modal-palette-section">
+                <span className="modal-palette-label">✦ Paleta de cores · Inspire-se para o look</span>
+                <div className="modal-palette-dots">
+                  {bookModal.palette.map((color, i) => (
+                    <div key={i} className="modal-palette-dot" style={{ background: color }} title={color} />
+                  ))}
+                  <span className="modal-palette-hint">tons da capa</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* CALENDAR */}
       <section className="calendar">
@@ -498,7 +564,7 @@ export default function EssenciaPlena() {
           <div className="modal-box" onClick={e => e.stopPropagation()}>
             <button className="modal-close" onClick={() => setModalOpen(false)}>✕</button>
             <div className="modal-img-wrap">
-              <img src="/Livroautoral.jpeg" alt="Gabriella Dinair" className="modal-img" />
+              <img src="/livroautoral.jpeg" alt="Gabriella Dinair" className="modal-img" />
             </div>
             <div className="modal-body">
               <span className="modal-tag">Quinta edição · Livro autoral</span>
@@ -526,7 +592,7 @@ export default function EssenciaPlena() {
               <FadeIn from="left">
                 <div className="book-highlight-img-side">
                   <div className="book-highlight-img-wrap">
-                    <img src="/Livroautoral.jpeg" alt="As Extraordinárias Estações de uma Vida Comum" className="book-highlight-img" />
+                    <img src="/livroautoral.jpeg" alt="As Extraordinárias Estações de uma Vida Comum" className="book-highlight-img" />
                   </div>
                 </div>
               </FadeIn>
