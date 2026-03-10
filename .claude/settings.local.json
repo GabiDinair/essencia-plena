@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -E \"\\\\.\\(jpeg|jpg|png\\)$\")",
+      "Bash(powershell -Command \":*)",
+      "Bash(grep -E \"\\\\.\\(jpeg|jpg\\)$\")"
+    ]
+  }
+}
