@@ -17,27 +17,27 @@ const pillars = [
   {
     svg: (
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--brown)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 3a7 7 0 0 1 7 7c0 2.5-1.3 4.7-3.3 6l-.7 2H9l-.7-2A7 7 0 0 1 5 10a7 7 0 0 1 7-7z"/>
-        <path d="M9 21h6"/><path d="M10 13c0 0 .5-1.5 2-1.5s2 1.5 2 1.5"/>
-      </svg>
-    ),
-    bg: "rgba(160,128,112,0.12)",
-    label: "Pilar 02",
-    name: "Mental",
-    desc: "Cuidando das emoções com sabedoria.",
-  },
-  {
-    svg: (
-      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--brown)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="5" r="2"/>
         <path d="M12 7v6l3 3"/><path d="M9 10l-3 2M15 10l3 2"/>
         <path d="M9 20c0 0 1-3 3-3s3 3 3 3"/>
       </svg>
     ),
     bg: "rgba(140,107,82,0.12)",
-    label: "Pilar 03",
+    label: "Pilar 02",
     name: "Físico",
     desc: "Honrando o corpo como Templo.",
+  },
+  {
+    svg: (
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--brown)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 3a7 7 0 0 1 7 7c0 2.5-1.3 4.7-3.3 6l-.7 2H9l-.7-2A7 7 0 0 1 5 10a7 7 0 0 1 7-7z"/>
+        <path d="M9 21h6"/><path d="M10 13c0 0 .5-1.5 2-1.5s2 1.5 2 1.5"/>
+      </svg>
+    ),
+    bg: "rgba(160,128,112,0.12)",
+    label: "Pilar 03",
+    name: "Mental",
+    desc: "Cuidando das emoções com sabedoria.",
   },
 ];
 

@@ -6,8 +6,7 @@ export default function Contact() {
     <section id="comunidade" className="contact">
       <div className="contact-inner">
         <FadeIn>
-          <span className="section-tag">Comunidade</span>
-          <h2 className="section-title display">Venha fazer parte<br />do Essência Plena</h2>
+          <h2 className="section-title display" style={{ whiteSpace: "nowrap", fontSize: "clamp(1.4rem, 3.5vw, 2.4rem)" }}>Faça parte da Comunidade</h2>
           <div className="ornament-divider">
             <div className="ornament-line" />
             <span className="ornament-symbol">✦</span>

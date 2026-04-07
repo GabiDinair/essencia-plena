@@ -88,7 +88,7 @@ const styles = `
   .evento-card { background: var(--white); border-radius: 16px; padding: 48px 40px; margin-bottom: 24px; border: 1px solid rgba(184,152,128,0.12); box-shadow: 0 4px 32px var(--shadow); display: grid; grid-template-columns: auto 1fr; gap: 32px; align-items: start; }
   @media(max-width:540px){ .evento-card{ grid-template-columns:1fr; } .pilar-card{ padding:36px 24px; } }
 
-  .info-pill { display: inline-flex; align-items: center; gap: 6px; background: var(--cream); border: 1px solid var(--nude); border-radius: 40px; padding: 5px 14px; font-size: 0.75rem; color: var(--text-body); margin-right: 8px; margin-bottom: 8px; }
+  .info-pill { display: inline-flex; align-items: center; gap: 6px; background: var(--cream); border: 1px solid var(--nude); border-radius: 40px; padding: 5px 12px; font-size: 0.72rem; color: var(--text-body); white-space: nowrap; }
   .info-pill-icon { font-size: 0.8rem; }
 
   .calendar { background: var(--white); }
@@ -184,11 +184,50 @@ const styles = `
   /* COLABORADORES / PARCEIROS */
   .colaboradores { background: var(--white); }
   .colaboradores-inner { max-width: 860px; margin: 0 auto; text-align: center; }
-  .parceiros-invite { margin-top: 64px; padding-top: 48px; border-top: 1px solid var(--nude); }
-  .parceiros-invite-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.5rem, 3vw, 2rem); color: var(--brown-deep); margin-bottom: 12px; font-weight: 400; }
-  .parceiros-invite-desc { font-size: 0.88rem; color: var(--text-light); line-height: 1.8; margin-bottom: 32px; max-width: 400px; margin-left: auto; margin-right: auto; }
-  .parceiros-btn { display: inline-flex; align-items: center; gap: 10px; background: transparent; border: 1.5px solid var(--brown-light); color: var(--brown); font-size: 0.8rem; letter-spacing: 0.18em; text-transform: uppercase; padding: 14px 32px; border-radius: 50px; text-decoration: none; transition: all 0.3s cubic-bezier(0.22,1,0.36,1); font-family: 'Jost', sans-serif; }
-  .parceiros-btn:hover { background: var(--brown); color: var(--white); border-color: var(--brown); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(92,64,51,0.18); }
+  .parceiros-cta { background: var(--brown-deep); padding: 72px 24px; text-align: center; }
+  .parceiros-cta-inner { max-width: 480px; margin: 0 auto; }
+  .parceiros-cta-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 2.8rem); font-weight: 300; color: var(--nude); margin-bottom: 16px; letter-spacing: 0.02em; }
+  .parceiros-cta-desc { font-size: 0.88rem; color: rgba(232,221,208,0.7); line-height: 1.85; margin-bottom: 36px; }
+  .parceiros-cta-btn { display: inline-flex; align-items: center; gap: 10px; background: transparent; border: 1px solid rgba(232,221,208,0.4); color: var(--nude); font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; padding: 14px 32px; border-radius: 50px; text-decoration: none; transition: all 0.3s cubic-bezier(0.22,1,0.36,1); font-family: 'Jost', sans-serif; }
+  .parceiros-cta-btn:hover { background: rgba(232,221,208,0.12); border-color: var(--nude); transform: translateY(-2px); }
+
+  /* LOGO STRIP */
+  .logos-strip-section { position: relative; width: 100%; overflow: hidden; padding: 20px 0 8px; background: linear-gradient(180deg, transparent 0%, rgba(232,221,208,0.18) 50%, transparent 100%); }
+  .logos-fade-left  { position: absolute; left:  0; top: 0; bottom: 0; width: 120px; background: linear-gradient(to right, var(--white) 30%, transparent); z-index: 2; pointer-events: none; }
+  .logos-fade-right { position: absolute; right: 0; top: 0; bottom: 0; width: 120px; background: linear-gradient(to left,  var(--white) 30%, transparent); z-index: 2; pointer-events: none; }
+  .logos-strip-track { display: flex; align-items: center; gap: 56px; width: max-content; padding: 20px 60px; cursor: grab; user-select: none; will-change: transform; }
+  .logo-item { flex-shrink: 0; opacity: 0.6; transition: opacity 0.35s, transform 0.4s cubic-bezier(0.22,1,0.36,1), filter 0.35s; cursor: pointer; }
+  .logo-item:hover { opacity: 1; transform: scale(1.1) translateY(-3px); filter: drop-shadow(0 8px 20px rgba(140,107,82,0.2)); }
+  .logo-item-placeholder { cursor: default; opacity: 0.28; }
+  .logo-item-placeholder:hover { opacity: 0.28; transform: none; filter: none; }
+  .logos-tip { font-size: 0.58rem; letter-spacing: 0.28em; color: var(--nude-dark); text-align: center; margin-top: 2px; margin-bottom: 52px; text-transform: uppercase; }
+
+  /* PARTNER MODAL */
+  .pm-box { background: var(--white); border-radius: 20px; max-width: 420px; width: 100%; overflow: hidden; box-shadow: 0 24px 80px rgba(60,40,30,0.22); animation: slideModal 0.35s cubic-bezier(0.22,1,0.36,1); position: relative; max-height: 92vh; overflow-y: auto; }
+  .pm-header { height: 140px; position: relative; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 0; flex-shrink: 0; }
+  .pm-header-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 30%, rgba(255,255,255,0.15) 100%); }
+  .pm-avatar { width: 88px; height: 88px; border-radius: 50%; border: 3px solid white; box-shadow: 0 8px 32px rgba(92,64,51,0.2); overflow: hidden; position: relative; z-index: 1; transform: translateY(44px); background: var(--nude); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .pm-avatar-img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+  .pm-avatar-initial { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; color: white; }
+  .pm-body { padding: 60px 28px 32px; text-align: center; }
+  .pm-identity { margin-bottom: 20px; }
+  .pm-tag { font-size: 0.55rem; letter-spacing: 0.4em; text-transform: uppercase; color: var(--brown-light); display: block; margin-bottom: 6px; }
+  .pm-name { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 400; color: var(--brown-deep); line-height: 1.15; margin-bottom: 4px; }
+  .pm-role { font-size: 0.78rem; color: var(--text-light); font-style: italic; font-family: 'Cormorant Garamond', serif; }
+  .pm-ornament { display: flex; align-items: center; gap: 12px; margin: 0 auto 20px; max-width: 200px; }
+  .pm-ornament-line { flex: 1; height: 1px; background: var(--nude-dark); }
+  .pm-ornament-dot { font-size: 0.65rem; color: var(--brown-light); flex-shrink: 0; }
+  .pm-desc { font-size: 0.85rem; line-height: 1.85; color: var(--text-body); margin-bottom: 16px; text-align: left; }
+  .pm-details { display: flex; flex-direction: column; margin-bottom: 20px; border-top: 1px solid var(--nude); }
+  .pm-detail-row { display: flex; align-items: center; gap: 14px; padding: 10px 0; border-bottom: 1px solid var(--nude); }
+  .pm-detail-dash { width: 18px; height: 1px; background: var(--brown-light); flex-shrink: 0; }
+  .pm-detail-text { font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: var(--brown-deep); letter-spacing: 0.02em; line-height: 1.3; }
+  .pm-links { display: flex; flex-direction: column; gap: 10px; margin-top: 4px; }
+  .pm-site { display: flex; align-items: center; gap: 9px; border: 1.5px solid var(--nude-dark); color: var(--text-body); background: var(--cream); font-size: 0.78rem; letter-spacing: 0.04em; padding: 11px 18px; border-radius: 50px; text-decoration: none; transition: all 0.3s; font-family: 'Jost', sans-serif; }
+  .pm-site:hover { background: var(--nude); border-color: var(--brown-light); transform: translateY(-2px); }
+  .pm-cref { display: inline-flex; align-items: center; gap: 6px; font-size: 0.72rem; color: var(--text-light); background: var(--cream); border-radius: 8px; padding: 8px 12px; margin-bottom: 16px; }
+  .pm-insta { display: flex; align-items: center; gap: 9px; border: 1.5px solid var(--brown-light); color: var(--brown); background: transparent; font-size: 0.82rem; letter-spacing: 0.06em; padding: 12px 20px; border-radius: 50px; text-decoration: none; transition: all 0.3s; font-family: 'Jost', sans-serif; margin-top: 4px; }
+  .pm-insta:hover { background: var(--brown); color: white; border-color: var(--brown); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(92,64,51,0.2); }
 
   .ornament-divider { display: flex; align-items: center; gap: 16px; margin: 48px 0; }
   .ornament-line { flex: 1; height: 1px; background: var(--nude); }
