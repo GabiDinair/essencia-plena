@@ -7,6 +7,7 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Pilares from "./components/Pilares";
 import BookModal from "./components/BookModal";
+import ParkModal from "./components/ParkModal";
 import Calendar from "./components/Calendar";
 import Encontros from "./components/Encontros";
 import EncounterModal from "./components/EncounterModal";
@@ -18,6 +19,7 @@ import Footer from "./components/Footer";
 export default function EssenciaPlena() {
   const [modalOpen, setModalOpen] = useState(false);
   const [bookModal, setBookModal] = useState(null);
+  const [parkModal, setParkModal] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   const scrollTo = (id) => {
@@ -41,9 +43,10 @@ export default function EssenciaPlena() {
 
       <Hero />
       <About />
-      <Pilares setBookModal={setBookModal} />
+      <Pilares setBookModal={setBookModal} setParkModal={setParkModal} />
 
       <BookModal bookModal={bookModal} setBookModal={setBookModal} />
+      <ParkModal parkModal={parkModal} setParkModal={setParkModal} />
 
       <Calendar />
       <Encontros setModalOpen={setModalOpen} />

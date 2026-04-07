@@ -1,7 +1,7 @@
 import FadeIn from "./FadeIn";
 import { books } from "../data";
 
-export default function Pilares({ setBookModal }) {
+export default function Pilares({ setBookModal, setParkModal }) {
   return (
     <section id="clube" className="pilares">
       <div className="container-wide">
@@ -51,9 +51,11 @@ export default function Pilares({ setBookModal }) {
               </div>
             </div>
             <p className="pilar-body">Um encontro especial voltado para atividade física, disciplina e cuidado com o corpo como Templo do Espírito Santo. Um momento ao ar livre, cercado pela natureza e boa companhia — seguido de um café à vontade para compartilhar, conversar e fortalecer os laços de amizade e comunhão.</p>
-            <div className="park-photo-card">
-              <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&q=75&auto=format&fit=crop" alt="Parque da Cidade" loading="lazy" />
-              <div className="park-photo-overlay"><span className="park-photo-caption">Parque da Cidade · Sarah Kubitschek</span></div>
+            <div className="park-photo-card" onClick={() => setParkModal(true)} style={{ cursor: "pointer" }}>
+              <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&q=75&auto=format&fit=crop" alt="Parque de Águas Claras" loading="lazy" />
+              <div className="park-photo-overlay">
+                <span className="park-photo-caption">Parque de Águas Claras · Ver detalhes →</span>
+              </div>
             </div>
             <div style={{ marginBottom: 0, display: "flex", flexWrap: "wrap", gap: "8px", justifyContent: "center" }}>
               <span className="info-pill">
@@ -69,7 +71,7 @@ export default function Pilares({ setBookModal }) {
               <span className="info-pill">
                 <span className="info-pill-icon">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-                </span> Parque da Cidade
+                </span> Parque de Águas Claras
               </span>
               <span className="info-pill">
                 <span className="info-pill-icon">

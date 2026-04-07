@@ -151,6 +151,11 @@ const styles = `
   .modal-palette-dot { width: 28px; height: 28px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.6); box-shadow: 0 2px 8px rgba(0,0,0,0.12); flex-shrink: 0; transition: transform 0.2s; cursor: default; }
   .modal-palette-dot:hover { transform: scale(1.2); }
   .modal-palette-hint { font-size: 0.75rem; color: var(--text-light); font-style: italic; font-family: 'Cormorant Garamond', serif; margin-left: 4px; }
+  .park-modal-header { display: flex; flex-direction: column; align-items: center; text-align: center; padding-bottom: 4px; }
+  .park-modal-icon { width: 56px; height: 56px; border-radius: 50%; background: var(--cream); border: 1px solid var(--nude-dark); display: flex; align-items: center; justify-content: center; margin-bottom: 12px; }
+  .park-modal-outfit { background: var(--cream); border-radius: 10px; padding: 14px 16px; margin-bottom: 20px; }
+  .park-outfit-item { font-size: 0.82rem; color: var(--text-body); line-height: 1.7; display: flex; gap: 8px; }
+  .park-outfit-dot { color: var(--brown-light); flex-shrink: 0; }
 
   .book-highlight { background: var(--white); }
   .book-highlight-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
