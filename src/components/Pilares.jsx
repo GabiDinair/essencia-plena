@@ -52,7 +52,7 @@ export default function Pilares({ setBookModal, setParkModal }) {
             </div>
             <p className="pilar-body">Um encontro especial voltado para atividade física, disciplina e cuidado com o corpo como Templo do Espírito Santo. Um momento ao ar livre, cercado pela natureza e boa companhia — seguido de um café à vontade para compartilhar, conversar e fortalecer os laços de amizade e comunhão.</p>
             <div className="park-photo-card" onClick={() => setParkModal(true)} style={{ cursor: "pointer" }}>
-              <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&q=75&auto=format&fit=crop" alt="Parque de Águas Claras" loading="lazy" />
+              <img src="/saudefisica.jpg" alt="Encontro de Saúde Física" loading="lazy" />
               <div className="park-photo-overlay">
                 <span className="park-photo-caption">Parque de Águas Claras · Ver detalhes →</span>
               </div>

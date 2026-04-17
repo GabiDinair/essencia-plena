@@ -13,6 +13,7 @@ import Encontros from "./components/Encontros";
 import EncounterModal from "./components/EncounterModal";
 import BookHighlight from "./components/BookHighlight";
 import Contact from "./components/Contact";
+import Loja from "./components/Loja";
 import Parceiros from "./components/Parceiros";
 import Footer from "./components/Footer";
 
@@ -55,6 +56,7 @@ export default function EssenciaPlena() {
 
       <BookHighlight />
       <Contact />
+      <Loja />
       <Parceiros />
       <Footer />
     </>

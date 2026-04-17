@@ -60,7 +60,7 @@ export const books = [
 ];
 
 export const timelineItems = [
-  { month: "Abril", title: "Encontro de Saúde Física", desc: "Atividade ao ar livre no Parque da Cidade", dot: "#B89880" },
+  { month: "Abril", title: "Encontro de Saúde Física", desc: "Atividade ao ar livre no Parque de Águas Claras", dot: "#B89880" },
   { month: "Maio", title: "Clube do Livro", desc: "Oitava Edição — Leitura e reflexão", dot: "#A08070" },
   { month: "Agosto", title: "Clube do Livro", desc: "Nona Edição — Leitura e reflexão", dot: "#8C6B52" },
   { month: "Outubro", title: "Encontro de Saúde Mental", desc: "Cuidado emocional à luz da Palavra", dot: "#7A5C44" },
@@ -76,5 +76,6 @@ export const navItems = [
   { tag: "06", label: "Nossos Encontros", id: "encontros" },
   { tag: "07", label: "Livro Autoral", id: "livro-autoral" },
   { tag: "08", label: "Faça Parte da Comunidade", id: "comunidade" },
-  { tag: "09", label: "Seja um parceiro", id: "parceiros" },
+  { tag: "09", label: "Loja", id: "loja" },
+  { tag: "10", label: "Seja um parceiro", id: "parceiros" },
 ];

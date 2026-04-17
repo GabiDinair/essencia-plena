@@ -13,9 +13,9 @@ const partners = [
     avatarBg: "linear-gradient(135deg, #D4C4B0, #B89880)",
     desc: "Profissional dedicado ao cuidado integral do corpo, unindo treinamento personalizado e massoterapia. Atende de forma presencial e online, adaptando cada treino à realidade e aos objetivos de cada pessoa.",
     details: ["Formado em Educação Física","Personal Trainer — treinos personalizados","Massoterapia — cuidado e recuperação","Consultoria online e presencial","Brasília – DF"],
-    cref: null,
+    cref: "CREF 022353-G DF",
     instagram: "personal._santos",
-    photo: null,
+    photo: "/personal.png",
     placeholder: false,
     Logo: () => (
       <svg viewBox="0 0 180 80" width="180" height="80" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -52,7 +52,7 @@ const partners = [
     cref: null,
     instagram: "dinairfilms",
     site: "https://videomaker-black.vercel.app/",
-    photo: null,
+    photo: "/dinairfilms.png",
     placeholder: false,
     Logo: () => (
       <svg viewBox="0 0 180 80" width="180" height="80" fill="none" xmlns="http://www.w3.org/2000/svg">
